@@ -3,9 +3,14 @@ package com.example.muneer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 
 public class LoginFragment extends AppCompatActivity {
-
+    EditText fullname,password;
+    Button loginBtn;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
