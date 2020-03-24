@@ -55,52 +55,51 @@ public class RegistrationFragment extends AppCompatActivity {
              final String Phone    = phone.getText().toString();
              final String Repassword    = repassword.getText().toString();
 
+             if(Password.length() < 6) {
+                 Toast.makeText(RegistrationFragment.this, "Password Must be >= 6 Characters", Toast.LENGTH_SHORT).show();
+             }
+             else if(TextUtils.isEmpty(FullName))
+             {
+                 Toast.makeText(RegistrationFragment.this, "fullname is Required ", Toast.LENGTH_SHORT).show();
+             }
+             else if(TextUtils.isEmpty(Email))
+             {
+                 Toast.makeText(RegistrationFragment.this, "Email is Required ", Toast.LENGTH_SHORT).show();
+             }
+             else if(TextUtils.isEmpty(Phone))
+             {
+                 Toast.makeText(RegistrationFragment.this, "phone is Required ", Toast.LENGTH_SHORT).show();
+             }
+             else if(TextUtils.isEmpty(Password))
+             {
+                 Toast.makeText(RegistrationFragment.this, "password is Required ", Toast.LENGTH_SHORT).show();
+             }
+             else if(TextUtils.isEmpty(Repassword)){
+                 Toast.makeText(RegistrationFragment.this, "Please confirm your password...", Toast.LENGTH_SHORT).show();
+             }
+             else if(!Password.equals(Repassword)){
+                 Toast.makeText(RegistrationFragment.this, "your password do not match with your confirm password...", Toast.LENGTH_SHORT).show();
+             }
+             else
+             {
+                 progressBar.setVisibility(View.VISIBLE);
+                 mAuth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                     @Override
+                     public void onComplete(@NonNull Task<AuthResult> task) {
+                         if(task.isSuccessful()){
+                             Toast.makeText(RegistrationFragment.this, "User Created.", Toast.LENGTH_SHORT).show();
+                             startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                         }else {
+                             Toast.makeText(RegistrationFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                             progressBar.setVisibility(View.GONE);
 
-             if(TextUtils.isEmpty(FullName)){
-                 fullname.setError("Password is Required.");
-                 return;
-             }
-             if(TextUtils.isEmpty(Email)){
-                 email.setError("Email is Required.");
-                 return;
-             }
-
-             if(TextUtils.isEmpty(Password)){
-                 password.setError("Password is Required.");
-                 return;
-             }
-             if(TextUtils.isEmpty(Phone)){
-                 phone.setError("Phone is Required.");
-                 return;
-             }
-
-             if(Password.length() < 6){
-                 password.setError("Password Must be >= 6 Characters");
-                 return;
-             }
-             if(TextUtils.isEmpty(Repassword)){
-                 repassword.setError("Re -type-password is Required");
-                 return;
-             }
-
-             progressBar.setVisibility(View.VISIBLE);
-             mAuth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                 @Override
-                 public void onComplete(@NonNull Task<AuthResult> task) {
-                     if(task.isSuccessful()){
-                         Toast.makeText(RegistrationFragment.this, "User Created.", Toast.LENGTH_SHORT).show();
-                         startActivity(new Intent(getApplicationContext(), Dashboard.class));
-                     }else {
-                         Toast.makeText(RegistrationFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                         progressBar.setVisibility(View.GONE);
-
+                         }
                      }
-                 }
-             });
+                 });
 
+             }
                 }
             }
-
         );
 
         LoginBtn.setOnClickListener(new View.OnClickListener() {
