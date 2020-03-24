@@ -18,10 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerOnButton();
-        if(mAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),Dahboard.class));
-            finish();
-        }
 
     }
     public void addListenerOnButton() {
