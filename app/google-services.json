@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1019613643675",
+    "firebase_url": "https://muneer-a3802.firebaseio.com",
+    "project_id": "muneer-a3802",
+    "storage_bucket": "muneer-a3802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019613643675:android:984fc449882c6437d6573e",
+        "android_client_info": {
+          "package_name": "com.example.muneer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019613643675-p8eim94gt5075g2mm1ol2rogikkdcs4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.muneer",
+            "certificate_hash": "6a185ed914cbd13e251789db6456fd64c45ba54b"
+          }
+        },
+        {
+          "client_id": "1019613643675-m88gbpsrbsdv81mpqoa9ojmln6d84c5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1OvSK1WzF7QwEYlwNghpJGWVWi012rIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019613643675-m88gbpsrbsdv81mpqoa9ojmln6d84c5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
