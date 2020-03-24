@@ -63,6 +63,18 @@
         android:background="@drawable/et_custom"
         android:textSize="15sp" />
 
+    <TextView
+        android:id="@+id/createText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="216dp"
+        android:text="New Here ?  Create Account"
+        android:textColor="@color/GreenBack" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
@@ -70,10 +82,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="178dp"
+        android:layout_marginStart="170dp"
         android:layout_marginLeft="170dp"
         android:layout_marginTop="07pt"
-        android:layout_marginBottom="173dp"
+        android:layout_marginBottom="143dp"
         android:visibility="invisible" />
 
     <Button

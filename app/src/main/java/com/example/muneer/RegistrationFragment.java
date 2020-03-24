@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,7 @@ public class RegistrationFragment extends AppCompatActivity {
     Button registerBtn;
     ProgressBar progressBar;
     String userID;
+    TextView LoginBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class RegistrationFragment extends AppCompatActivity {
         repassword=findViewById(R.id.et_repassword);
         phone=findViewById(R.id.et_phone);
         mAuth=FirebaseAuth.getInstance();
+        LoginBtn=findViewById(R.id.createText);
         progressBar=findViewById(R.id.progressBar);
 
         if(mAuth.getCurrentUser() != null){
@@ -100,6 +103,12 @@ public class RegistrationFragment extends AppCompatActivity {
 
         );
 
+        LoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),LoginFragment.class));
+            }
+        });
 
 
     }
