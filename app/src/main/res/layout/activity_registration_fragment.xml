@@ -30,7 +30,7 @@
         android:textSize="17sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="40dp"/>
 
     <EditText
         android:id="@+id/et_name"
@@ -138,7 +138,7 @@
 
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/btn_custom"
@@ -150,13 +150,14 @@
             android:id="@+id/createText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="107dp"
-            android:layout_marginBottom="116dp"
+            android:layout_marginStart="106dp"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="121dp"
             android:text="Already Registered ? Login Here"
-            android:textColor="#FFEB3B" />
+            android:textColor="@color/GreenBack" />
 
 
     </RelativeLayout>

@@ -13,7 +13,7 @@ public class Dashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dahboard);
+        setContentView(R.layout.activity_dashboard);
     }
 
     public void logout(View view) {
