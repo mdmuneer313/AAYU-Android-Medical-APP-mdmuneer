@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationFragment extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     EditText fullname,password,repassword,email,phone;
     Button registerBtn;
     ProgressBar progressBar;
@@ -38,7 +38,7 @@ public class RegistrationFragment extends AppCompatActivity {
         progressBar=findViewById(R.id.progressBar);
 
         if(mAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),Dahboard.class));
+            startActivity(new Intent(getApplicationContext(), Dashboard.class));
             finish();
         }
 
@@ -86,7 +86,7 @@ public class RegistrationFragment extends AppCompatActivity {
                  public void onComplete(@NonNull Task<AuthResult> task) {
                      if(task.isSuccessful()){
                          Toast.makeText(RegistrationFragment.this, "User Created.", Toast.LENGTH_SHORT).show();
-                         startActivity(new Intent(getApplicationContext(),Dahboard.class));
+                         startActivity(new Intent(getApplicationContext(), Dashboard.class));
                      }else {
                          Toast.makeText(RegistrationFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                          progressBar.setVisibility(View.GONE);
