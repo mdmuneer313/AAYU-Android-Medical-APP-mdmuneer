@@ -122,10 +122,12 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="180dp"
             android:layout_marginTop="07pt"
-            android:layout_marginBottom="58dp"
+            android:layout_marginEnd="174dp"
+            android:layout_marginBottom="49dp"
             android:visibility="invisible" />
 
         <Button
@@ -136,13 +138,25 @@
 
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="34dp"
+            android:layout_marginTop="21dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/btn_custom"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/register"
             android:textColor="@color/DarkTheme" />
+
+        <TextView
+            android:id="@+id/createText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="116dp"
+            android:text="Already Registered ? Login Here"
+            android:textColor="#FFEB3B" />
 
 
     </RelativeLayout>
