@@ -15,4 +15,16 @@
     <string name="Registration">Register</string>
     <string name="welcomelabel">Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing  to provide an "application-like" experience within a Web browser.</string>
     <string name="phone">Phone</string>
+    <string name="Health">Aid</string>
+    <string name="account">Profile</string>
+    <string name="settings">Account</string>
+    <string name="About">
+To design an application that helps the user to find the best suitable hospital for medication.
+    </string>
+    <string name="Introduction">
+        Usually many lives are lost due to the time taken for shifting a patient from one hospital to another hospital because of lack of necessary equipment. The existing systems do not provide any information about the availability of equipment of all the hospitals present. There are individual systems of hospitals that show the information about their specific hospital.
+    </string>
+    <string name="conclusion">
+        Present health care system doesn’t not consist of any medium to know all the information of different hospitals. We have conducted a survey and found that it is required by the people to know information about different hospitals and the equipment present in them so that they can choose appropriate hospital for treatments. It also helps in getting information of medicines and steps to follow in emergency situations.
+    </string>
 </resources>

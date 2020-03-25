@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/DarkTheme"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:text="ABOUT AYU"
+        android:textAlignment="center"
+        android:textColor="@color/DarkTheme"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="418dp"
+        android:layout_height="620dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/DarkTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="380dp"
+            android:layout_height="62dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/GreenBack"
+            android:fontFamily="@font/ptsansnarrow_bold"
+            android:text="@string/About"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="163dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/GreenBack"
+            android:fontFamily="@font/ptsansnarrow_bold"
+            android:text="@string/Introduction"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="190dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/GreenBack"
+            android:fontFamily="@font/ptsansnarrow_bold"
+            android:text="@string/conclusion"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

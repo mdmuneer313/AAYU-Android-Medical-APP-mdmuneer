@@ -37,6 +37,11 @@ public class LoginFragment extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
 
+        if(mAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), Nav_Bottom.class));
+            finish();
+        }
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +63,7 @@ public class LoginFragment extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LoginFragment.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                            startActivity(new Intent(getApplicationContext(), Nav_Bottom.class));
                         }else {
                             Toast.makeText(LoginFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);

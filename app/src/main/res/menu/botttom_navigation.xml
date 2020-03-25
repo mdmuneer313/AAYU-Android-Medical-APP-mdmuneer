@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_Aid"
+        android:icon="@drawable/ic_ahealth_plus_24dp"
+        android:title="@string/Health" />
+
+    <item
+        android:id="@+id/nav_insurance"
+        android:icon="@drawable/ic_insurance_black_24dp"
+        android:title="Insurance"
+        />
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_chat_black_24dp"
+        android:title="Chat" />
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_about_24dp"
+        android:title="About" />
+
+</menu>

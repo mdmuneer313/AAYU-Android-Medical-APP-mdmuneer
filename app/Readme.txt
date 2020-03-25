@@ -4,3 +4,5 @@ github repo visited for authentication:-https://github.com/bikashthapa01/firebas
 Chat app:-https://github.com/KODDevYouTube/ChatAppTutorial
 
 profile:-https://www.youtube.com/watch?v=pAhYEy6s9wQ
+
+bottom nav:-https://www.youtube.com/watch?v=tPV8xA7m-iw
