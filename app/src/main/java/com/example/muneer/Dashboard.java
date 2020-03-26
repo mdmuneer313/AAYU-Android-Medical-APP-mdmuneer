@@ -24,13 +24,13 @@ public class Dashboard extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    ActionBar actionBar;
+   // ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        actionBar=getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#009688")));
+       // actionBar=getSupportActionBar();
+      //  actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#009688")));
 
         phone = findViewById(R.id.profilePhone);
         fullName = findViewById(R.id.profileName);

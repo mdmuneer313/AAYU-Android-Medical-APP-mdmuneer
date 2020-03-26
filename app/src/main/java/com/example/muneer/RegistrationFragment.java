@@ -81,11 +81,15 @@ public class RegistrationFragment extends AppCompatActivity {
              }
              else if(TextUtils.isEmpty(Phone))
              {
-                 Toast.makeText(RegistrationFragment.this, "phone is Required ", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(RegistrationFragment.this, "phone is Required ", Toast.LENGTH_SHORT).show();
+             }
+             else if(Phone.length()!=10)
+             {
+                 Toast.makeText(RegistrationFragment.this, "Phone should be of 10 digits ", Toast.LENGTH_SHORT).show();
              }
              else if(TextUtils.isEmpty(Password))
              {
-                 Toast.makeText(RegistrationFragment.this, "password is Required ", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(RegistrationFragment.this, "password is Required (10 Numbers) ", Toast.LENGTH_SHORT).show();
              }
              else if(TextUtils.isEmpty(Repassword)){
                  Toast.makeText(RegistrationFragment.this, "Please confirm your password...", Toast.LENGTH_SHORT).show();
@@ -118,7 +122,11 @@ public class RegistrationFragment extends AppCompatActivity {
                                      Log.d(TAG, "onFailure: " + e.toString());
                                  }
                              });
-                             startActivity(new Intent(getApplicationContext(), Nav_Bottom.class));
+                             Intent i = new Intent(getApplicationContext(),Nav_Bottom.class);
+                             i.putExtra("finish", true);
+                             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                             startActivity(i);
+                             finish();
                          }else {
                              Toast.makeText(RegistrationFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                              progressBar.setVisibility(View.GONE);

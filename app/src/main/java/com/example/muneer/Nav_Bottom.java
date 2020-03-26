@@ -23,6 +23,12 @@ ActionBar actionBar;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav__bottom);
+        boolean finish = getIntent().getBooleanExtra("finish", false);
+        if (finish) {
+            startActivity(new Intent(getApplicationContext(), LoginFragment.class));
+            finish();
+            return;
+        }
         getSupportActionBar().setTitle("Ayu");
         actionBar=getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#009688")));

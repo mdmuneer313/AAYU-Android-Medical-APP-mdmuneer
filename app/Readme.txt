@@ -6,3 +6,5 @@ Chat app:-https://github.com/KODDevYouTube/ChatAppTutorial
 profile:-https://www.youtube.com/watch?v=pAhYEy6s9wQ
 
 bottom nav:-https://www.youtube.com/watch?v=tPV8xA7m-iw
+
+phone and email validation:-https://stackoverflow.com/questions/22505336/email-and-phone-number-validation-in-android/22505377

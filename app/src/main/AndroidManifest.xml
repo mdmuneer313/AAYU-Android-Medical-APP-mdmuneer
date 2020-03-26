@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Nav_Bottom"
             ></activity>
-        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".Dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".LoginFragment"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".RegistrationFragment"
