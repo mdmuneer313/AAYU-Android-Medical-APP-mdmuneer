@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/DarkTheme"
+    android:layout_height="match_parent"
+    tools:context=".PhoneOtpAuth">
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/et_custom"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textColor="@color/GreenBack"
+        android:textColorHint="@color/GreenBack"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_otptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:text="OTP Send To Your Phone Number"
+        android:textColor="@color/GreenBack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="296dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:text="Phone Verification"
+        android:textAlignment="center"
+        android:textColor="@color/GreenBack"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_otp"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="336dp"
+        android:background="@drawable/et_custom"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:hint="OTP"
+        android:visibility="invisible"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textColor="@color/GreenBack"
+        android:textColorHint="@color/GreenBack"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_otp"
+        android:layout_width="190dp"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:text="Send OTP"
+        android:textColor="@color/DarkTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_otp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="190dp"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/abrilfatface_regular"
+        android:text="Verify"
+        android:textColor="@color/DarkTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_otp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

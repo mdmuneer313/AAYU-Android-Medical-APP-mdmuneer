@@ -29,11 +29,11 @@
         android:text="@string/login" />
 
     <Button
+        android:id="@+id/registerbutton"
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
-        android:id="@+id/registerbutton"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="420dp"
         android:background="@drawable/btn_custom"
         android:text="@string/Registration" />
 

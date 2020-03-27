@@ -122,9 +122,10 @@ public class RegistrationFragment extends AppCompatActivity {
                                      Log.d(TAG, "onFailure: " + e.toString());
                                  }
                              });
-                             Intent i = new Intent(getApplicationContext(),Nav_Bottom.class);
+                             Intent i = new Intent(getApplicationContext(),PhoneOtpAuth.class);
                              i.putExtra("finish", true);
                              i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                             i.putExtra("PHONE",Phone);
                              startActivity(i);
                              finish();
                          }else {
