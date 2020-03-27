@@ -83,7 +83,7 @@ public class RegistrationFragment extends AppCompatActivity {
              {
                      Toast.makeText(RegistrationFragment.this, "phone is Required ", Toast.LENGTH_SHORT).show();
              }
-             else if(Phone.length()!=10)
+             else if(Phone.length()!=12)
              {
                  Toast.makeText(RegistrationFragment.this, "Phone should be of 10 digits ", Toast.LENGTH_SHORT).show();
              }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,8 +30,9 @@ int randomNumber;
         otpBtn=findViewById(R.id.btn_otp);
         verifyBtn=findViewById(R.id.btn_verify);
 
-        phonetext.setText(""+getIntent().getStringExtra("PHONE"));
-
+       phonetext.setText(""+getIntent().getStringExtra("PHONE"));
+        StrictMode.ThreadPolicy policy= new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         otpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
