@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -85,7 +89,23 @@ verifyBtn.setOnClickListener(new View.OnClickListener() {
 });
 
 
+
+
     }
 
 
 }
+
+
+/*
+OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("https://gurubrahma-smsly-sms-to-india-v1.p.rapidapi.com/otp/generate/9066724717?getOTP=true&duration=100&digits=4&message=Your%20verification%20code%20is%20OTP_VALUE")
+                .get()
+                .addHeader("x-rapidapi-host", "gurubrahma-smsly-sms-to-india-v1.p.rapidapi.com")
+                .addHeader("x-rapidapi-key", "3b383a30a1mshd5144835ddec52ap1067c7jsn5a56d137d639")
+                .build();
+
+        Response response = client.newCall(request).execute();
+ */
