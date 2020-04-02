@@ -94,7 +94,7 @@ public class RegisterChatActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Intent intent = new Intent(RegisterChatActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(RegisterChatActivity.this, MainChatActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                         finish();
