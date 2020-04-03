@@ -76,8 +76,8 @@ public class MainChatActivity extends AppCompatActivity {
         final ViewPager viewPager = findViewById(R.id.view_pager);
 
         ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
-        viewpagerAdapter.addFragment(new ChatsFragments(), "Chats");
-       viewpagerAdapter.addFragment(new UsersFragments(), "Users");
+        viewpagerAdapter.addFragment(new ChatsFragments(),"CHAT");
+        viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
         viewPager.setAdapter(viewpagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -105,10 +105,8 @@ public class MainChatActivity extends AppCompatActivity {
     static class ViewPagerAdapter extends FragmentPagerAdapter {
 
 
-        private static ArrayList<Fragment> fragments;
-        private static ArrayList<String> titles;
-        private Fragment fragment;
-        private String title;
+        private ArrayList<Fragment> fragments;
+        private  ArrayList<String> titles;
 
         ViewPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -126,13 +124,11 @@ public class MainChatActivity extends AppCompatActivity {
             return fragments.size();
         }
 
-        public void addFragment(Fragment fragment,String title)
-            {
-                this.fragment = fragment;
-                this.title = title;
-                fragments.add(fragment);
-                 titles.add(title);
-            }
+        void addFragment(Fragment fragment, String title){
+            fragments.add(fragment);
+            titles.add(title);
+        }
+
 
 
         @Nullable

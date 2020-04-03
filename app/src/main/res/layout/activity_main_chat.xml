@@ -41,7 +41,8 @@
         android:background="@color/GreenBack"
         app:tabSelectedTextColor="#fff"
         app:tabIndicatorColor="#fff"
-        app:tabTextColor="@color/DarkTheme"/>
+        app:tabTextColor="#FFFFFF"/>
+
 
 </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
@@ -49,4 +50,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 </LinearLayout>
