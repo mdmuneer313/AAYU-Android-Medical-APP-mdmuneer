@@ -1,18 +1,25 @@
 package com.example.muneer;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
+import com.example.muneer.Fragements.ChatsFragments;
+import com.example.muneer.Fragements.UsersFragments;
 import com.example.muneer.Model.User;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +27,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -29,6 +38,7 @@ public class MainChatActivity extends AppCompatActivity {
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +56,9 @@ public class MainChatActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
+                assert user != null;
                 username.setText(user.getUsername());
-                if (user.getImageURL().equals("default")){
+                if (user.getImageURL().equals("default")) {
                     profile_image.setImageResource(R.mipmap.ic_launcher);
                 } else {
 
@@ -61,6 +72,14 @@ public class MainChatActivity extends AppCompatActivity {
 
             }
         });
+        final TabLayout tabLayout = findViewById(R.id.tab_layout);
+        final ViewPager viewPager = findViewById(R.id.view_pager);
+
+        ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        viewpagerAdapter.addFragment(new ChatsFragments(), "Chats");
+       viewpagerAdapter.addFragment(new UsersFragments(), "Users");
+        viewPager.setAdapter(viewpagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
@@ -68,11 +87,12 @@ public class MainChatActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.chatmenu, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
-            case  R.id.logout:
+            case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 // change this code beacuse your app will crash
                 startActivity(new Intent(MainChatActivity.this, StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
@@ -80,5 +100,45 @@ public class MainChatActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+
+    static class ViewPagerAdapter extends FragmentPagerAdapter {
+
+
+        private static ArrayList<Fragment> fragments;
+        private static ArrayList<String> titles;
+        private Fragment fragment;
+        private String title;
+
+        ViewPagerAdapter(FragmentManager fm) {
+            super(fm);
+            fragments = new ArrayList<>();
+            titles = new ArrayList<>();
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragments.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragments.size();
+        }
+
+        public void addFragment(Fragment fragment,String title)
+            {
+                this.fragment = fragment;
+                this.title = title;
+                fragments.add(fragment);
+                 titles.add(title);
+            }
+
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return super.getPageTitle(position);
+        }
     }
 }
