@@ -8,14 +8,16 @@ public class User {
     private String fullname;
     private String email;
     private String phone;
+    private String search;
 
-    public User(String id, String username, String imageURL, String fullname, String email,String phone) {
+    public User(String id, String username, String imageURL, String fullname, String email,String phone,String search) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
         this.fullname = fullname;
         this.email = email;
         this.phone = phone;
+        this.search = search;
     }
 
     public User() {
@@ -67,5 +69,12 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 }

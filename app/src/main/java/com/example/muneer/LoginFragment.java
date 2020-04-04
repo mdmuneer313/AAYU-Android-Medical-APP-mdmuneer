@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginFragment extends AppCompatActivity {
     EditText email,password;
-    TextView createBtn;
+    TextView createBtn,forgetpassword;
     Button loginBtn;
     ProgressBar progressBar;
     FirebaseAuth auth;
@@ -36,6 +36,14 @@ public class LoginFragment extends AppCompatActivity {
         createBtn = findViewById(R.id.createText);
         auth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
+        forgetpassword=findViewById(R.id.forgot_password);
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginFragment.this, ResetPasswordActivity.class));
+            }
+        });
+
 
 
 
@@ -68,7 +76,7 @@ public class LoginFragment extends AppCompatActivity {
                                }
                                else
                                {
-                                   Toast.makeText(LoginFragment.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
+                                   Toast.makeText(LoginFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                    progressBar.setVisibility(View.GONE);
                                }
                            }

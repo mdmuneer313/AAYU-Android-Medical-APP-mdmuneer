@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".Fragements.UsersFragments">
 
-  <androidx.recyclerview.widget.RecyclerView
+  <EditText
+      android:id="@+id/search_users"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/recycler_view"/>
+
+      android:hint="Search..." />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </LinearLayout>
 
 </FrameLayout>

@@ -112,6 +112,7 @@ public class RegistrationFragment extends AppCompatActivity {
                                      hashMap.put("fullname", FullName);
                                      hashMap.put("email", Email);
                                      hashMap.put("phone", Phone);
+                                     hashMap.put("search", Username.toLowerCase());
                                      hashMap.put("imageURL", "default");
 
                                     reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {

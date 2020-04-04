@@ -72,6 +72,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="216dp"
+        android:textStyle="bold"
         android:text="New Here ?  Create Account"
         android:textColor="@color/GreenBack" />
 
@@ -82,10 +83,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="194dp"
         android:layout_marginLeft="170dp"
-        android:layout_marginTop="07pt"
-        android:layout_marginBottom="143dp"
+        android:layout_marginBottom="102dp"
         android:visibility="invisible" />
 
     <Button
@@ -100,6 +101,21 @@
         android:fontFamily="@font/roboto_regular"
         android:textColor="@android:color/black"
         android:text="@string/login"/>
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="190dp"
+        android:gravity="center"
+        android:text="Forgot you password?"
+        android:textColor="@color/GreenBack"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

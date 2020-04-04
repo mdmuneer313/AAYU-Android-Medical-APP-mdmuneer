@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
+import com.example.muneer.Fragements.ChatsFragments;
 import com.example.muneer.Fragements.ProfileFragment;
 import com.example.muneer.Fragements.UsersFragments;
 import com.example.muneer.Model.User;
@@ -73,10 +74,11 @@ public class MainChatActivity extends AppCompatActivity {
 
             }
         });
-        final TabLayout tabLayout = findViewById(R.id.tab_layout);
-        final ViewPager viewPager = findViewById(R.id.view_pager);
+      TabLayout tabLayout=findViewById(R.id.tab_layout);
+      ViewPager viewPager=findViewById(R.id.view_pager);
 
         ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        viewpagerAdapter.addFragment(new ChatsFragments(),"Chats");
         viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
         viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
         viewPager.setAdapter(viewpagerAdapter);
@@ -138,7 +140,42 @@ public class MainChatActivity extends AppCompatActivity {
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
-            return super.getPageTitle(position);
+            return titles.get(position);
         }
+  }
+
+/*
+class ViewPagerAdapter extends FragmentPagerAdapter {
+private ArrayList<Fragment> fragments;
+private  ArrayList<String> titles;
+
+    public ViewPagerAdapter(@NonNull FragmentManager fm) {
+        super(fm);
+        this.fragments=new ArrayList<>();
+        this.titles=new ArrayList<>();
     }
+
+    @NonNull
+    @Override
+    public Fragment getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public int getCount() {
+        return 0;
+    }
+    public void addFragment(Fragment fragment, String title)
+    {
+        fragments.add(fragment);
+        titles.add(title);
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titles.get(position);
+    }
+} */
+
 }
