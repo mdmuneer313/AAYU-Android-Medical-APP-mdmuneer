@@ -1,8 +1,5 @@
 package com.example.muneer;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,6 +9,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,7 +23,7 @@ public class LoginFragment extends AppCompatActivity {
     TextView createBtn;
     Button loginBtn;
     ProgressBar progressBar;
-    FirebaseAuth mAuth;
+    FirebaseAuth auth;
 
 
     @Override
@@ -34,13 +34,10 @@ public class LoginFragment extends AppCompatActivity {
         password=findViewById(R.id.et_password);
         loginBtn=findViewById(R.id.btn_login);
         createBtn = findViewById(R.id.createText);
-        mAuth=FirebaseAuth.getInstance();
+        auth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
 
-        if(mAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), Nav_Bottom.class));
-            finish();
-        }
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,18 +55,24 @@ public class LoginFragment extends AppCompatActivity {
                     password.setError("Password is Required");
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                mAuth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(LoginFragment.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), Nav_Bottom.class));
-                        }else {
-                            Toast.makeText(LoginFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-                        }
-            }
-        });
+               auth.signInWithEmailAndPassword(Email,Password)
+                       .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                           @Override
+                           public void onComplete(@NonNull Task<AuthResult> task) {
+                               if(task.isSuccessful())
+                               {
+                                   Intent intent = new Intent(LoginFragment.this, Nav_Bottom.class);
+                                   intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                   startActivity(intent);
+                                   finish();
+                               }
+                               else
+                               {
+                                   Toast.makeText(LoginFragment.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
+                                   progressBar.setVisibility(View.GONE);
+                               }
+                           }
+                       });
 
             }
         });

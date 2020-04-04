@@ -5,15 +5,17 @@ public class User {
     private String id;
     private String username;
     private String imageURL;
-    private String status;
-    private String search;
+    private String fullname;
+    private String email;
+    private String phone;
 
-    public User(String id, String username, String imageURL, String status, String search) {
+    public User(String id, String username, String imageURL, String fullname, String email,String phone) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
-        this.status = status;
-        this.search = search;
+        this.fullname = fullname;
+        this.email = email;
+        this.phone = phone;
     }
 
     public User() {
@@ -44,19 +46,26 @@ public class User {
         this.imageURL = imageURL;
     }
 
-    public String getStatus() {
-        return status;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public String getSearch() {
-        return search;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSearch(String search) {
-        this.search = search;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

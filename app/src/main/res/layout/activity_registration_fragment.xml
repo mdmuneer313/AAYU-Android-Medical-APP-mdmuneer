@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="16sp"
+    android:scrollbarSize="25sp"
     android:background="@color/DarkTheme"
     tools:context=".RegistrationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/DarkTheme"
+        tools:context=".RegistrationFragment">
 
     <TextView
         android:id="@+id/tv_logo"
@@ -19,7 +28,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/indigo_daisy"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:id="@+id/tv_subtitle"
@@ -30,7 +39,23 @@
         android:textSize="17sp"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="UserName"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/GreenBack"
+            android:textColorHint="@color/GreenBack"
+            android:textSize="15sp" />
+
 
     <EditText
         android:id="@+id/et_name"
@@ -112,54 +137,54 @@
         android:textColorHint="@color/GreenBack"
         android:textSize="15sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="379dp"
+            android:layout_height="197dp"
+            android:layout_weight="1">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="07pt"
-            android:layout_marginEnd="174dp"
-            android:layout_marginBottom="49dp"
-            android:visibility="invisible" />
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
 
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_custom"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/register"
+                android:textColor="@color/DarkTheme" />
 
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/btn_custom"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/register"
-            android:textColor="@color/DarkTheme" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="07pt"
+                android:layout_marginEnd="174dp"
+                android:layout_marginBottom="49dp"
+                android:visibility="invisible" />
 
-        <TextView
-            android:id="@+id/createText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="106dp"
-            android:layout_marginEnd="104dp"
-            android:layout_marginBottom="121dp"
-            android:text="Already Registered ? Login Here"
-            android:textColor="@color/GreenBack" />
+            <TextView
+                android:id="@+id/createText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="78dp"
+                android:layout_marginEnd="99dp"
+                android:layout_marginBottom="171dp"
+                android:text="Already Registered ? Login Here"
+                android:textColor="@color/GreenBack" />
 
 
-    </RelativeLayout>
-
-</LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

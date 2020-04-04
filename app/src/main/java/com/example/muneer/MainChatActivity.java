@@ -16,7 +16,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
-import com.example.muneer.Fragements.ChatsFragments;
+import com.example.muneer.Fragements.ProfileFragment;
 import com.example.muneer.Fragements.UsersFragments;
 import com.example.muneer.Model.User;
 import com.google.android.material.tabs.TabLayout;
@@ -38,6 +38,7 @@ public class MainChatActivity extends AppCompatActivity {
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +77,13 @@ public class MainChatActivity extends AppCompatActivity {
         final ViewPager viewPager = findViewById(R.id.view_pager);
 
         ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
-        viewpagerAdapter.addFragment(new ChatsFragments(),"CHAT");
         viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
+        viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
         viewPager.setAdapter(viewpagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -95,7 +98,8 @@ public class MainChatActivity extends AppCompatActivity {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 // change this code beacuse your app will crash
-                startActivity(new Intent(MainChatActivity.this, StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                startActivity(new Intent(MainChatActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                finish();
                 return true;
         }
 
