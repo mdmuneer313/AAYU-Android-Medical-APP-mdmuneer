@@ -9,8 +9,9 @@ public class User {
     private String email;
     private String phone;
     private String search;
+    private String status;
 
-    public User(String id, String username, String imageURL, String fullname, String email,String phone,String search) {
+    public User(String id, String username, String imageURL, String fullname, String email,String phone,String search,String status) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
@@ -18,6 +19,7 @@ public class User {
         this.email = email;
         this.phone = phone;
         this.search = search;
+        this.status=status;
     }
 
     public User() {
@@ -77,4 +79,12 @@ public class User {
     public void setSearch(String search) {
         this.search = search;
     }
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }

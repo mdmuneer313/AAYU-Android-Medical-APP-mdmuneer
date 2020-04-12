@@ -30,13 +30,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainChatActivity extends AppCompatActivity {
     CircleImageView profile_image;
     TextView username;
-
+    ValueEventListener seenListener;
     FirebaseUser firebaseUser;
     DatabaseReference reference;
 
@@ -100,8 +101,8 @@ public class MainChatActivity extends AppCompatActivity {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 // change this code beacuse your app will crash
-                startActivity(new Intent(MainChatActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
-                finish();
+                startActivity(new Intent(MainChatActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+              finish(); //Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK
                 return true;
         }
 
@@ -144,6 +145,31 @@ public class MainChatActivity extends AppCompatActivity {
         }
   }
 
+    private void status(String status){
+        reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("status", status);
+
+        reference.updateChildren(hashMap);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
+    }
+
+}
+
+
+
 /*
 class ViewPagerAdapter extends FragmentPagerAdapter {
 private ArrayList<Fragment> fragments;
@@ -177,5 +203,3 @@ private  ArrayList<String> titles;
         return titles.get(position);
     }
 } */
-
-}

@@ -50,6 +50,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder>{
         } else {
             Glide.with(mContext).load(user.getImageURL()).into(holder.profile_image);
         }
+        if (ischat){
+            if (user.getStatus().equals("online")){
+                holder.img_on.setVisibility(View.VISIBLE);
+                holder.img_off.setVisibility(View.GONE);
+            } else {
+                holder.img_on.setVisibility(View.GONE);
+                holder.img_off.setVisibility(View.VISIBLE);
+            }
+        } else {
+            holder.img_on.setVisibility(View.GONE);
+            holder.img_off.setVisibility(View.GONE);
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,10 +80,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder>{
     public class viewholder extends RecyclerView.ViewHolder{
      public TextView username;
      public ImageView profile_image;
+        private ImageView img_on;
+        private ImageView img_off;
      public viewholder(@NonNull View itemView) {
          super(itemView);
          username=itemView.findViewById(R.id.username);
          profile_image=itemView.findViewById(R.id.profile_image);
+         img_on = itemView.findViewById(R.id.img_on);
+         img_off = itemView.findViewById(R.id.img_off);
      }
  }
 

@@ -49,8 +49,8 @@ public class UsersFragments extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUsers = new ArrayList<>();
-        userAdapter = new UserAdapter(getContext(), mUsers, false);
-        recyclerView.setAdapter(userAdapter);
+       // userAdapter = new UserAdapter(getContext(), mUsers, false);
+       // recyclerView.setAdapter(userAdapter);
 
         readUsers();
         search_users = view.findViewById(R.id.search_users);
@@ -94,8 +94,8 @@ public class UsersFragments extends Fragment {
                     }
                 }
 
-               // userAdapter = new UserAdapter(getContext(), mUsers, false);
-                //recyclerView.setAdapter(userAdapter);
+                userAdapter = new UserAdapter(getContext(), mUsers, false);
+                recyclerView.setAdapter(userAdapter);
             }
 
             @Override
