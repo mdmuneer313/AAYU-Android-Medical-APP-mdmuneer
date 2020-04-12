@@ -49,6 +49,8 @@ public class ChatsFragments extends Fragment {
 
         fuser = FirebaseAuth.getInstance().getCurrentUser();
         usersList = new ArrayList<>();
+        //userAdapter =new UserAdapter(getContext(),mUsers,true);
+        //recyclerView.setAdapter(userAdapter);
         reference = FirebaseDatabase.getInstance().getReference("Chats").child(fuser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -88,7 +90,7 @@ public class ChatsFragments extends Fragment {
                 for(DataSnapshot snapshot:dataSnapshot.getChildren())
                 {
                   User user=snapshot.getValue(User.class);
-                  mUsers.add(user);
+                 mUsers.add(user);
 
 
                   //Display one users
@@ -112,8 +114,8 @@ public class ChatsFragments extends Fragment {
                         }
                     }
                 }
-                userAdapter =new UserAdapter(getContext(),mUsers,true);
-               recyclerView.setAdapter(userAdapter);
+              userAdapter =new UserAdapter(getContext(),mUsers,true);
+              recyclerView.setAdapter(userAdapter);
             }
 
             @Override
