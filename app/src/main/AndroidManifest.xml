@@ -43,7 +43,7 @@
         <activity android:name=".Nav_Bottom"
             android:alwaysRetainTaskState="true"/>
         <activity
-            android:name=".Dashboard"
+            android:name=".Account"
             android:theme="@style/AppTheme.NoActionBar"
             android:alwaysRetainTaskState="true"/>
         <activity

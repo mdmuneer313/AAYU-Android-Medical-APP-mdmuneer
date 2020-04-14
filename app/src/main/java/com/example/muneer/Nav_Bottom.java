@@ -1,19 +1,18 @@
 package com.example.muneer;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.content.Intent;
-
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -96,7 +95,7 @@ ActionBar actionBar;
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            startActivity(new Intent(Nav_Bottom.this, Dashboard.class));
+            startActivity(new Intent(Nav_Bottom.this, Account.class));
             return true;
         }
 

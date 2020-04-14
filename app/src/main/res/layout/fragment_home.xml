@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/DarkTheme"
     android:layout_height="match_parent"
    >
     <EditText
         android:id="@+id/search_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+android:textColor="@color/GreenBack"
+        android:textColorHint="@color/GreenBack"
         android:hint="Search..." />
 
     <LinearLayout
@@ -17,6 +19,7 @@
         >
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_hps"
+            android:background="@color/GreenBack"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

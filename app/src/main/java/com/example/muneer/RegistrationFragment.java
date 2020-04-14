@@ -80,7 +80,7 @@ public class RegistrationFragment extends AppCompatActivity {
              }
              else if(Phone.length()!=12)
              {
-                 Toast.makeText(RegistrationFragment.this, "Phone should be of 10 digits ", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(RegistrationFragment.this, "Phone should be of 12 digits ", Toast.LENGTH_SHORT).show();
              }
              else if(TextUtils.isEmpty(Password))
              {

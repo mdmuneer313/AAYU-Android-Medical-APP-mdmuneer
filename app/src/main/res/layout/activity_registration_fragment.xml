@@ -129,7 +129,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/et_custom"
         android:fontFamily="@font/roboto_regular"
-        android:hint="@string/phone"
+        android:hint="Phone    +91 XXXXXXXXXX"
         android:inputType="textPhonetic"
         android:layout_marginTop="10dp"
         android:padding="15dp"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ayu</string>
+    <string name="app_name">AAYU</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -27,4 +27,10 @@ To design an application that helps the user to find the best suitable hospital 
     <string name="conclusion">
         Present health care system doesn’t not consist of any medium to know all the information of different hospitals. We have conducted a survey and found that it is required by the people to know information about different hospitals and the equipment present in them so that they can choose appropriate hospital for treatments. It also helps in getting information of medicines and steps to follow in emergency situations.
     </string>
+
+    <string name="lictext">Life Insurance Corporation of India (LIC) is one of the oldest state-owned insurance Companies in India.
+       </string>
 </resources>
+
+
+

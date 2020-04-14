@@ -11,7 +11,7 @@
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="AYU"
+       android:text="AAYU"
        android:layout_marginTop="150dp"
        android:textColor="@color/GreenBack"
        android:textSize="129dp"

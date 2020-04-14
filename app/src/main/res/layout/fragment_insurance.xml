@@ -1,12 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101010"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Insurance Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
 
-</RelativeLayout>
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="401dp"
+            android:layout_height="213dp"
+            app:cardCornerRadius="30dp"
+
+            app:cardBackgroundColor="#00BCD4"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/lic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Life Insurance Corporation of India (LIC)"
+                android:textSize="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/lictext"
+                android:textSize="15dp" />
+
+            <RatingBar
+                android:id="@+id/licrating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="115dp"
+                android:rating="4.0"
+                android:text="Hospital city"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Starting At @490 p.m"
+                android:textColor="#8A2100"
+                />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_custom"
+                android:layout_marginLeft="120dp"
+                android:text="BUY"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="401dp"
+            android:layout_height="213dp"
+            android:layout_marginTop="230dp"
+            app:cardCornerRadius="30dp"
+
+            app:cardBackgroundColor="#00BCD4"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/hdfc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="HDFC Standard Life Insurance "
+                android:textSize="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="HDFC Standard Life Insurance is one of the highly reputed private sector insurance companies in India today."
+                android:textSize="15dp" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="115dp"
+                android:rating="4.5"
+                android:text="Hospital city"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Starting At @690 p.m"
+                android:textColor="#8A2100"
+                />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_custom"
+                android:layout_marginLeft="120dp"
+                android:text="BUY"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="401dp"
+            android:layout_height="213dp"
+            android:layout_marginTop="460dp"
+            app:cardCornerRadius="30dp"
+            app:cardBackgroundColor="#00BCD4"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/maxlife" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Max Life Insurance Company "
+                android:textSize="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Max Life Insurance Company is one of the highly renowned insurance companies currently providing policies to millions of Indians."
+                android:textSize="14dp" />
+
+            <RatingBar
+                android:id="@+id/maxliferating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="115dp"
+                android:rating="4.0"
+                android:text="Hospital city"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Starting At @540 p.m"
+                android:textColor="#8A2100"
+                />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_custom"
+                android:layout_marginLeft="120dp"
+                android:text="BUY"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="401dp"
+            android:layout_height="213dp"
+            android:layout_marginTop="690dp"
+            app:cardBackgroundColor="#00BCD4"
+            app:cardCornerRadius="30dp">
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_custom"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="BUY" />
+
+            <RatingBar
+                android:id="@+id/bajajrating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="115dp"
+                android:rating="4.5"
+                android:text="Hospital city"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Starting At @480 p.m"
+                android:textColor="#8A2100" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bajaj" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Bajaj Allianz is one of the highly reputed and renowned insurance companies that provides with the best deals on policies"
+                android:textSize="14dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Bajaj Allianz Life Insurance  "
+                android:textSize="15dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="401dp"
+            android:layout_height="213dp"
+            android:layout_marginTop="920dp"
+            app:cardBackgroundColor="#00BCD4"
+            app:cardCornerRadius="30dp">
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/btn_custom"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="BUY" />
+
+            <RatingBar
+                android:id="@+id/kotakrating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="115dp"
+                android:rating="4.5"
+                android:text="Hospital city"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Starting At @490 p.m"
+                android:textColor="#8A2100" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/kotak" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Kotak Mahindra is one of the highly sought after insurance companies presently in India operating with millions of customers."
+                android:textSize="14dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                android:text="Kotak Mahindra Life Insurance  "
+                android:textSize="15dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

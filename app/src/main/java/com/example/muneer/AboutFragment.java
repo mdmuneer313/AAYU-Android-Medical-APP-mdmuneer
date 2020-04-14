@@ -22,38 +22,11 @@ public class AboutFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        inflater.inflate(R.layout.fragment_about, container, false);
-      //  LogoutBtn = view.findViewById(R.id.loginbutton);
 
-        /*LogoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logoutfunct();
-            }
-        }); */
+        View view= inflater.inflate(R.layout.fragment_about, container, false);
 
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        return view;
     }
 
-/*
-    private void logoutfunct() {
-        FirebaseAuth.getInstance().signOut();//logout
-        startActivity(new Intent(getActivity(),LoginFragment.class));
-   getActivity().finish();
-
-    }
-*/
 
 }
-
-/*LogoutBtn = view.findViewById(R.id.loginbutton);
-        LogoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mAuth.getCurrentUser() != null)
-                    mAuth.signOut();
-                Intent intent = new Intent(getActivity(), LoginFragment.class);
-                startActivity(intent);
-            }
-        });
-*/
