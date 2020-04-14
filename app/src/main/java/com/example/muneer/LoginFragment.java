@@ -88,7 +88,7 @@ public class LoginFragment extends AppCompatActivity {
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Nav_Bottom.class);
+                Intent i = new Intent(getApplicationContext(),RegistrationFragment.class);
                 i.putExtra("finish", true);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
                 startActivity(i);

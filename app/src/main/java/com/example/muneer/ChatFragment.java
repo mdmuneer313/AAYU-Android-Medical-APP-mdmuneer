@@ -28,7 +28,6 @@ public class ChatFragment extends Fragment {
             public void onClick(View v) {
                // startActivity(new Intent(getActivity(),RegisterChatActivity.class));
                 Intent intent = new Intent(getActivity(),MainChatActivity.class);
-                intent.addFlags( Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
