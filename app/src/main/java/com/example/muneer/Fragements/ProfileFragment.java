@@ -77,19 +77,25 @@ public class ProfileFragment extends Fragment {
                 fullname.setText(user.getFullname());
                 email.setText(user.getEmail());
                 phone.setText(user.getPhone());
-
-                if (user.getImageURL().equals("default")){
-                    image_profile.setImageResource(R.mipmap.ic_launcher);
-                } else {
-                    Glide.with(getContext()).load(user.getImageURL()).into(image_profile);
+                if(isAdded())
+                {
+                    if (user.getImageURL().equals("default")){
+                        image_profile.setImageResource(R.mipmap.ic_launcher);
+                    } else {
+                        Glide.with(getContext()).load(user.getImageURL()).into(image_profile);
+                    }
                 }
+
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
+
 
         image_profile.setOnClickListener(new View.OnClickListener() {
             @Override
