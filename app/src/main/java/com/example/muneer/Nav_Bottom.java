@@ -29,7 +29,7 @@ ActionBar actionBar;
             finish();
             return;
         }
-        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "AYU" + "</font>")));
+        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "AAYU" + "</font>")));
         actionBar=getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#009688")));
         BottomNavigationView bottomNav = findViewById(R.id.nav_bottom);
