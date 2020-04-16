@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -28,7 +29,7 @@ ActionBar actionBar;
             finish();
             return;
         }
-        getSupportActionBar().setTitle("Ayu");
+        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "AYU" + "</font>")));
         actionBar=getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#009688")));
         BottomNavigationView bottomNav = findViewById(R.id.nav_bottom);
@@ -46,28 +47,28 @@ ActionBar actionBar;
                     Fragment selectedFragment = null;
                     switch (item.getItemId()) {
                         case R.id.nav_home:
-                            getSupportActionBar().setTitle("Home");
+                            getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "Home" + "</font>")));
 
                             getFragment(new HomeFragment());
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.nav_Aid:
-                            getSupportActionBar().setTitle("Aid");
+                            getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "Aid" + "</font>")));
                             getFragment(new Aidfragment());
                             selectedFragment = new Aidfragment();
                             break;
                         case R.id.nav_insurance:
-                            getSupportActionBar().setTitle("Insurance");
+                            getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "Insurance" + "</font>")));
                             getFragment(new InsuranceFragment());
                             selectedFragment = new InsuranceFragment();
                             break;
                         case R.id.nav_chat:
-                            getSupportActionBar().setTitle("Chat");
+                            getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "Chat" + "</font>")));
                             getFragment(new ChatFragment());
                             selectedFragment = new ChatFragment();
                             break;
                         case R.id.nav_about:
-                            getSupportActionBar().setTitle("About");
+                            getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#0000\">" + "About" + "</font>")));
                             getFragment(new AboutFragment());
                             selectedFragment = new AboutFragment();
                             break;
