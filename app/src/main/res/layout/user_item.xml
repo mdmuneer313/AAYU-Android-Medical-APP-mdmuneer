@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
+    android:background="@color/DarkTheme"
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -20,6 +21,7 @@
         android:layout_toEndOf="@id/profile_image"
         android:layout_toRightOf="@id/profile_image"
         android:text="username"
+        android:textColor="@color/GreenBack"
         android:textSize="18sp" />
 r
     <de.hdodenhof.circleimageview.CircleImageView

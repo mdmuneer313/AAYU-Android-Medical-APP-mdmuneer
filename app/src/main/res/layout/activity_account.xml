@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DarkTheme"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/constraintLayout"
         android:layout_width="416dp"
         android:layout_height="140dp"
         android:layout_marginBottom="596dp"
-        android:background="@color/GreenBack"
+        android:background="@color/DarkTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,26 +20,25 @@
 
         <TextView
             android:id="@+id/profileName"
-            android:layout_width="wrap_content"
+            android:layout_width="287dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="173dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="184dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Profile name"
+        android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:textColor="@color/DarkTheme"
+            android:textColor="@color/GreenBack"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
-        android:layout_width="95dp"
-        android:layout_height="108dp"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
         android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -46,56 +46,29 @@
         app:layout_constraintTop_toTopOf="@+id/constraintLayout"
          />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="412dp"
         android:layout_height="535dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/DarkTheme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image">
 
-
-        <TextView
-            android:id="@+id/occupation_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Engineering Student"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/workplace_textview"
-            android:layout_width="232dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:text="BITM Collage Alipure  Ballari"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workplace_textview">
+            >
 
             <ImageView
                 android:id="@+id/email_imageview"
@@ -117,6 +90,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
+                android:textColor="@color/GreenBack"
                 android:text="your profile email"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -133,6 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="300dp"
+            android:layout_marginTop="180dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -161,6 +136,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="184dp"
                 android:text=" your phone number"
+                android:textColor="@color/GreenBack"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.031"
@@ -174,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="240dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -204,6 +180,7 @@
                 android:layout_marginEnd="184dp"
                 android:text="aayu@batch2.com"
                 android:textSize="18sp"
+                android:textColor="@color/GreenBack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.031"
                 app:layout_constraintStart_toEndOf="@+id/twitter_imageview"
@@ -216,7 +193,7 @@
             android:layout_width="142dp"
             android:layout_height="54dp"
             android:layout_marginStart="123dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="320dp"
             android:layout_marginEnd="147dp"
             android:layout_marginBottom="170dp"
             android:background="@drawable/btn_custom"
@@ -230,7 +207,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 
 

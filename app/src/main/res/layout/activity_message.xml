@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e6e6"
+    android:background="#000000"
     tools:context=".MessageActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -31,7 +31,7 @@
                 android:id="@+id/username"
                 android:textSize="18sp"
                 android:layout_marginLeft="25dp"
-                android:textColor="#fff"
+                android:textColor="@color/DarkTheme"
                 android:textStyle="bold"
                 android:layout_marginStart="25dp" />
 
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:padding="5dp"
         android:id="@+id/bottom"
-        android:background="#fff"
+        android:background="#332D2D"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
 
@@ -60,6 +60,8 @@
             android:id="@+id/text_send"
             android:background="@android:color/transparent"
             android:hint="Type a message..."
+            android:textColorHint="@color/GreenBack"
+            android:textColor="@color/GreenBack"
             android:layout_toLeftOf="@id/btn_send"
             android:layout_centerVertical="true"/>
 

@@ -38,15 +38,16 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/GreenBack"
-        app:tabSelectedTextColor="@color/DarkTheme"
+        android:background="@color/DarkTheme"
+        app:tabSelectedTextColor="#FFFFFF"
         app:tabIndicatorColor="#fff"
-        app:tabTextColor="@color/DarkTheme"/>
+        app:tabTextColor="@color/GreenBack"/>
 
 </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
+        android:background="@color/DarkTheme"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
