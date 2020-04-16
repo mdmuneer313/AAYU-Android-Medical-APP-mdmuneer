@@ -47,7 +47,7 @@ ActionBar actionBar;
                     switch (item.getItemId()) {
                         case R.id.nav_home:
                             getSupportActionBar().setTitle("Home");
-                         
+
                             getFragment(new HomeFragment());
                             selectedFragment = new HomeFragment();
                             break;
