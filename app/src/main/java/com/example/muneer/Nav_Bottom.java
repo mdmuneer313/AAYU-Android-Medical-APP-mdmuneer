@@ -86,7 +86,7 @@ ActionBar actionBar;
                     return true;
                 }
             };
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.account_profile, menu);
@@ -102,7 +102,7 @@ ActionBar actionBar;
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } */
 
     private void getFragment(Fragment fragment)
     {

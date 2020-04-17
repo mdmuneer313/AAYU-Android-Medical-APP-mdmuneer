@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.muddzdev.styleabletoast.StyleableToast;
 
 public class LoginFragment extends AppCompatActivity {
     EditText email,password;
@@ -55,12 +56,12 @@ public class LoginFragment extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(Email))
                 {
-                    email.setError("Email is Required");
+                    StyleableToast.makeText(LoginFragment.this, "Email is Required",R.style.exampleToast).show();
                     return;
                 }
                 if(TextUtils.isEmpty(Password))
                 {
-                    password.setError("Password is Required");
+                    StyleableToast.makeText(LoginFragment.this, "Password is Required",R.style.exampleToast).show();
                 }
                 progressBar.setVisibility(View.VISIBLE);
                auth.signInWithEmailAndPassword(Email,Password)

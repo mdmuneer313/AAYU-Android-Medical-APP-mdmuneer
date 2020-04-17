@@ -14,4 +14,27 @@
     <style name="MenuStyle" parent="Theme.AppCompat.Light">
         <item name="android:background">@android:color/white</item>
     </style>
+
+    <style name="exampleToast">
+        <item name="stColorBackground">#F44336</item>
+        <item name="stTextColor">@color/DarkTheme</item>
+        <item name="stStrokeColor">@color/DarkTheme</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="cornerRadius">3dp</item>
+    </style>
+    <style name="mytoast">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">@color/GreenBack</item>
+        <item name="stFont">@font/roboto_regular</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">#FF0000</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">#000000</item>
+        <item name="stLength">LONG</item> LONG or SHORT
+        <item name="stGravity">top</item> top or center
+        <item name="stRadius">5dp</item>
+    </style>
+
+
 </resources>

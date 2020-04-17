@@ -1,17 +1,21 @@
 package com.example.muneer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
     //private RecyclerView recyclerView;
    // private HomeAdapter homeAdapter;
    // private List<Home> homeList;
+    CardView profiledetails;
+
 
     public HomeFragment() {
         super();
@@ -28,6 +32,14 @@ public class HomeFragment extends Fragment {
       // homeAdapter=new HomeAdapter(getContext(),homeList);
       //  recyclerView.setAdapter(homeAdapter);
        // readUsers();
+        profiledetails=view.findViewById(R.id.profile_details);
+        profiledetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I=new Intent(getContext(),Account.class);
+                startActivity(I);
+            }
+        });
 
 
         return  view;

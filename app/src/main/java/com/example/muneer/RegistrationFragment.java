@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.muddzdev.styleabletoast.StyleableToast;
 
 import java.util.HashMap;
 
@@ -60,37 +61,38 @@ public class RegistrationFragment extends AppCompatActivity {
              final String Repassword    = repassword.getText().toString();
 
              if(Password.length() < 6) {
-                 Toast.makeText(RegistrationFragment.this, "Password Must be >= 6 Characters", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "Password Must be >= 6 Characters",R.style.exampleToast).show();
+
              }
              else if(TextUtils.isEmpty(FullName))
              {
-                 Toast.makeText(RegistrationFragment.this, "fullname is Required ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "fullname is Required ", R.style.exampleToast).show();
              }
              else if(TextUtils.isEmpty(Email))
              {
-                 Toast.makeText(RegistrationFragment.this, "Email is Required ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "Email is Required ", R.style.exampleToast).show();
              }
              else if(TextUtils.isEmpty(Username))
              {
-                 Toast.makeText(RegistrationFragment.this, "Username is Required ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "Username is Required ",R.style.exampleToast).show();
              }
              else if(TextUtils.isEmpty(Phone))
              {
-                     Toast.makeText(RegistrationFragment.this, "phone is Required ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "phone is Required ", R.style.exampleToast).show();
              }
              else if(Phone.length()!=13)
              {
-                 Toast.makeText(RegistrationFragment.this, "Phone should be of 13 digits ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "Phone should be of 13 digits ", R.style.exampleToast).show();
              }
              else if(TextUtils.isEmpty(Password))
              {
-                 Toast.makeText(RegistrationFragment.this, "password is Required (10 Numbers) ", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "password is Required  ", R.style.exampleToast).show();
              }
              else if(TextUtils.isEmpty(Repassword)){
-                 Toast.makeText(RegistrationFragment.this, "Please confirm your password...", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "Please confirm your password...", R.style.exampleToast).show();
              }
              else if(!Password.equals(Repassword)){
-                 Toast.makeText(RegistrationFragment.this, "your password do not match with your confirm password...", Toast.LENGTH_SHORT).show();
+                 StyleableToast.makeText(RegistrationFragment.this, "your password do not match with your confirm password...", R.style.exampleToast).show();
              }
              else
              {
