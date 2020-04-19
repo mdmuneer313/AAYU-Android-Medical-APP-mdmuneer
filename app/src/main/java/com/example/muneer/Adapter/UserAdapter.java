@@ -90,17 +90,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder>{
      public ImageView profile_image;
         private ImageView img_on;
         private ImageView img_off;
-        private TextView last_msg;
+        private TextView Last_msg;
      public viewholder(@NonNull View itemView) {
          super(itemView);
          username=itemView.findViewById(R.id.username);
          profile_image=itemView.findViewById(R.id.profile_image);
          img_on = itemView.findViewById(R.id.img_on);
          img_off = itemView.findViewById(R.id.img_off);
-         last_msg = itemView.findViewById(R.id.last_msg);
+         Last_msg = itemView.findViewById(R.id.last_msg);
      }
  }
-    private void lastMessage(final String userid, final TextView last_msg) {
+    private void lastMessage(final String userid, final TextView Last_msg) {
         theLastMessage = "default";
         final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Chats");
@@ -120,11 +120,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder>{
 
                 switch (theLastMessage) {
                     case "default":
-                        last_msg.setText("No Message");
+                        Last_msg.setText("No Message");
                         break;
 
                     default:
-                        last_msg.setText(theLastMessage);
+                        Last_msg.setText(theLastMessage);
                         break;
                 }
 
