@@ -10,17 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.muneer.Model.Home;
+import com.example.muneer.Model.Hospital;
 import com.example.muneer.R;
 
 import java.util.List;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
+public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHolder> {
 
-    private List<Home> mHome;
+    private List<Hospital> mHospital;
     private Context mContext;
-    public HomeAdapter(Context mContext, List<Home> mHome){
-        this.mHome = mHome;
+    public HospitalAdapter(Context mContext, List<Hospital> mHospital){
+        this.mHospital = mHospital;
         this.mContext = mContext;
     }
 
@@ -29,15 +29,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(mContext).inflate(R.layout.hospials_item,parent,false);
 
-        return new HomeAdapter.ViewHolder(view);
+        return new HospitalAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        final Home home=mHome.get(position);
-        holder.HospitalName.setText(home.getHpname());
-        holder.HospitalCity.setText(home.getCity());
+        final Hospital hospital = mHospital.get(position);
+        holder.HospitalName.setText(hospital.getHpname());
+        holder.HospitalCity.setText(hospital.getCity());
         //holder.HospitalRating.setRating(home.getHprating());
     }
 

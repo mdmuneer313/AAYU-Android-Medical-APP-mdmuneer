@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16sp"
+
     android:scrollbarSize="25sp"
     android:background="@color/DarkTheme"
     tools:context=".RegistrationFragment">

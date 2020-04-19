@@ -1,19 +1,19 @@
 package com.example.muneer.Model;
 
-public class Home {
+public class Hospital {
     private String hprating;
     private String address;
     private String city;
     private String hpname;
 
-    public Home(String hprating, String address, String city, String hpname) {
+    public Hospital(String hprating, String address, String city, String hpname) {
         this.hprating = hprating;
         this.address = address;
         this.city = city;
         this.hpname = hpname;
     }
 
-    public Home() {
+    public Hospital() {
 
     }
     public String getHprating() {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/DarkTheme"
+    android:background="#00BCD4"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -12,7 +12,7 @@
         android:layout_width="416dp"
         android:layout_height="140dp"
         android:layout_marginBottom="596dp"
-        android:background="@color/DarkTheme"
+        android:background="#00BCD4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:text="Profile name"
         android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:textColor="@color/GreenBack"
+            android:textColor="@color/DarkTheme"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.441"
@@ -50,7 +50,7 @@
         android:layout_width="412dp"
         android:layout_height="535dp"
         android:layout_marginBottom="1dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/DarkTheme"
@@ -197,8 +197,10 @@
             android:layout_marginTop="320dp"
             android:layout_marginEnd="147dp"
             android:layout_marginBottom="170dp"
-            android:background="@drawable/btn_custom"
+            android:background="@drawable/btn_blue"
+
             android:text="Logout"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/DarkTheme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
