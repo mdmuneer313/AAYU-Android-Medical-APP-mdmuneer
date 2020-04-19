@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.example.muneer.Fragements.ChatsFragments;
 import com.example.muneer.Fragements.ProfileFragment;
 import com.example.muneer.Fragements.UsersFragments;
+import com.example.muneer.Model.Chat;
 import com.example.muneer.Model.User;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -75,15 +76,48 @@ public class MainChatActivity extends AppCompatActivity {
 
             }
         });
-      TabLayout tabLayout=findViewById(R.id.tab_layout);
-      ViewPager viewPager=findViewById(R.id.view_pager);
 
-        ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
-        viewpagerAdapter.addFragment(new ChatsFragments(),"Chats");
-        viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
-        viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
-        viewPager.setAdapter(viewpagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
+
+        final TabLayout tabLayout=findViewById(R.id.tab_layout);
+       final ViewPager viewPager=findViewById(R.id.view_pager);
+
+        reference = FirebaseDatabase.getInstance().getReference("Chats");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ViewPagerAdapter viewpagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+                int unread = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    Chat chat = snapshot.getValue(Chat.class);
+                    if (chat.getReceiver().equals(firebaseUser.getUid()) && !chat.isIsseen()){
+                        unread++;
+                    }
+                }
+                if (unread == 0){
+                    viewpagerAdapter.addFragment(new ChatsFragments(), "Chats");
+                } else {
+                    viewpagerAdapter.addFragment(new ChatsFragments(), "("+unread+") Chats");
+                }
+
+                viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
+                viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
+
+                viewPager.setAdapter(viewpagerAdapter);
+                tabLayout.setupWithViewPager(viewPager);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+        //viewpagerAdapter.addFragment(new ChatsFragments(),"Chats");
+       // viewpagerAdapter.addFragment(new UsersFragments(),"USERS");
+       // viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
+
     }
 
 

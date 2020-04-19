@@ -24,10 +24,10 @@
     </style>
     <style name="mytoast">
         <item name="stTextBold">true</item>
-        <item name="stTextColor">@color/GreenBack</item>
+        <item name="stTextColor">@color/DarkTheme</item>
         <item name="stFont">@font/roboto_regular</item>
         <item name="stTextSize">14sp</item>
-        <item name="stColorBackground">#FF0000</item>
+        <item name="stColorBackground">#37BD12</item>
         <item name="stSolidBackground">true</item>
         <item name="stStrokeWidth">3dp</item>
         <item name="stStrokeColor">#000000</item>

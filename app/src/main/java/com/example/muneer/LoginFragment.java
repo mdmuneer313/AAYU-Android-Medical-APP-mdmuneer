@@ -70,10 +70,12 @@ public class LoginFragment extends AppCompatActivity {
                            public void onComplete(@NonNull Task<AuthResult> task) {
                                if(task.isSuccessful())
                                {
+                                   StyleableToast.makeText(LoginFragment.this, "Login Sucessfull",R.style.mytoast).show();
                                    Intent intent = new Intent(LoginFragment.this, Nav_Bottom.class);
                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                    startActivity(intent);
                                    finish();
+                                   StyleableToast.makeText(LoginFragment.this, "Login Sucessfull",R.style.mytoast).show();
                                }
                                else
                                {

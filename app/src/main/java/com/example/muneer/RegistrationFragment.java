@@ -121,10 +121,12 @@ public class RegistrationFragment extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()){
+                                                StyleableToast.makeText(RegistrationFragment.this, "Registration Sucessfull",R.style.mytoast).show();
                                                 Intent intent = new Intent(RegistrationFragment.this, Nav_Bottom.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                                 startActivity(intent);
                                                 finish();
+
                                             }
                                         }
                                     });
