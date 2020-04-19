@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/DarkTheme"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:background="@color/DarkTheme"
     android:layout_height="match_parent">
@@ -23,14 +29,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:layout_width="418dp"
-        android:layout_height="620dp"
+        android:layout_width="426dp"
+        android:layout_height="918dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:background="@color/colorPrimary"
         android:backgroundTint="@color/DarkTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -60,8 +66,8 @@
             android:fontFamily="@font/ptsansnarrow_bold"
             android:text="@string/Introduction"
             android:textAlignment="center"
-            android:textSize="16dp"
             android:textColor="@color/GreenBack"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -75,11 +81,67 @@
             android:fontFamily="@font/ptsansnarrow_bold"
             android:text="@string/conclusion"
             android:textAlignment="center"
-            android:textSize="16dp"
             android:textColor="@color/GreenBack"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firebase"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="480dp"
+            app:cardBackgroundColor="#2d2d2d"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/firebase" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Androidstudio"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="480dp"
+            app:cardBackgroundColor="#2d2d2d"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/android_studio" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

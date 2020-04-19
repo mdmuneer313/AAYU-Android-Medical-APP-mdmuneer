@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class AboutFragment extends Fragment {
+import de.hdodenhof.circleimageview.CircleImageView;
 
+public class AboutFragment extends Fragment {
+CircleImageView androidstudio,firebase;
     public AboutFragment() {
         // Required empty public constructor
     }
@@ -24,6 +26,9 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view= inflater.inflate(R.layout.fragment_about, container, false);
+androidstudio= view.findViewById(R.id.muneerpic);
+firebase=view.findViewById(R.id.aswithpic);
+
 
         return view;
     }
