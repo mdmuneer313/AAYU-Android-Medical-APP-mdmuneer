@@ -26,8 +26,8 @@ CircleImageView androidstudio,firebase;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view= inflater.inflate(R.layout.fragment_about, container, false);
-androidstudio= view.findViewById(R.id.muneerpic);
-firebase=view.findViewById(R.id.aswithpic);
+androidstudio= view.findViewById(R.id.Androidstudio);
+firebase=view.findViewById(R.id.firebase);
 
 
         return view;
