@@ -16,8 +16,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="193dp"
+        android:layout_height="31dp"
         android:layout_marginTop="38dp"
         android:fontFamily="@font/ptsansnarrow_bold"
         android:text="ABOUT AAYU"
@@ -28,15 +28,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ggithublik"
+        app:cardCornerRadius="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="08dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/githubicon"/>
+    </androidx.cardview.widget.CardView>
+
     <RelativeLayout
         android:layout_width="426dp"
         android:layout_height="918dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:background="@color/colorPrimary"
         android:backgroundTint="@color/DarkTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -93,7 +112,7 @@
             android:layout_height="170dp"
             android:layout_marginLeft="230dp"
             android:layout_marginTop="480dp"
-            app:cardBackgroundColor="#2d2d2d"
+            app:cardBackgroundColor="#1D2524"
             app:cardCornerRadius="20dp"
             app:cardElevation="5dp">
 
@@ -109,7 +128,6 @@
                     android:src="@drawable/firebase" />
 
 
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -119,7 +137,7 @@
             android:layout_height="170dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="480dp"
-            app:cardBackgroundColor="#2d2d2d"
+            app:cardBackgroundColor="#1D2524"
             app:cardCornerRadius="20dp"
             app:cardElevation="5dp">
 
@@ -134,7 +152,6 @@
                     android:layout_height="wrap_content"
 
                     android:src="@drawable/android_studio" />
-
 
 
             </LinearLayout>
