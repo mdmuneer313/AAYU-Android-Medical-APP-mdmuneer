@@ -39,9 +39,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/DarkTheme"
-        app:tabSelectedTextColor="#FFFFFF"
+        app:tabSelectedTextColor="@color/GreenBack"
         app:tabIndicatorColor="#fff"
-        app:tabTextColor="@color/GreenBack"/>
+        app:tabTextColor="#FFFFFF"/>
 
 </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
