@@ -54,37 +54,31 @@ public class LoginFragment extends AppCompatActivity {
                 String Email = email.getText().toString().trim();
                 String Password = password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(Email))
-                {
-                    StyleableToast.makeText(LoginFragment.this, "Email is Required",R.style.exampleToast).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(Password))
-                {
-                    StyleableToast.makeText(LoginFragment.this, "Password is Required",R.style.exampleToast).show();
-                }
-                progressBar.setVisibility(View.VISIBLE);
-               auth.signInWithEmailAndPassword(Email,Password)
-                       .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                           @Override
-                           public void onComplete(@NonNull Task<AuthResult> task) {
-                               if(task.isSuccessful())
-                               {
-                                   StyleableToast.makeText(LoginFragment.this, "Login Sucessfull",R.style.mytoast).show();
-                                   Intent intent = new Intent(LoginFragment.this, Nav_Bottom.class);
-                                   intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                   startActivity(intent);
-                                   finish();
-                                   StyleableToast.makeText(LoginFragment.this, "Login Sucessfull",R.style.mytoast).show();
-                               }
-                               else
-                               {
-                                   Toast.makeText(LoginFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                   progressBar.setVisibility(View.GONE);
-                               }
-                           }
-                       });
+                if (TextUtils.isEmpty(Email)) {
+                    StyleableToast.makeText(LoginFragment.this, "Email is Required", R.style.exampleToast).show();
+                } else if (TextUtils.isEmpty(Password)) {
+                    StyleableToast.makeText(LoginFragment.this, "Password is Required", R.style.exampleToast).show();
+                } else {
 
+                progressBar.setVisibility(View.VISIBLE);
+                auth.signInWithEmailAndPassword(Email, Password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    StyleableToast.makeText(LoginFragment.this, "Login Sucessfull", R.style.mytoast).show();
+                                    Intent intent = new Intent(LoginFragment.this, Nav_Bottom.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                    StyleableToast.makeText(LoginFragment.this, "Login Sucessfull", R.style.mytoast).show();
+                                } else {
+                                    Toast.makeText(LoginFragment.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }
+                        });
+               }
             }
         });
 

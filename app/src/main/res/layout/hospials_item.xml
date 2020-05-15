@@ -1,40 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
     android:layout_height="wrap_content">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/Hpname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospital Name"
+            android:textSize="30sp"
+            android:fontFamily="@font/ptsansnarrow_bold"
+            />
 
 
-    <TextView
-        android:id="@+id/Hpname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:text="Hospital Name"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/Hpcity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="23dp"
-        android:text="Hospital city"
-        android:textSize="18sp" />
 
-    <RatingBar
-        android:id="@+id/Hprating"
-        style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:rating="3.5"
-        android:text="Hospital city"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/Hpcity"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/abrilfatface_regular"
+            android:text="Hospital city"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/Hpaddress"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hospital Address"
+            android:fontFamily="@font/abrilfatface_regular"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/HpContact_no"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Contact No"
+            android:fontFamily="@font/abrilfatface_regular"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Hprating"
+            android:layout_width="67dp"
+            android:layout_height="30dp"
+            android:text="Rating"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/abrilfatface_regular"
+            />
 
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
