@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DarkTheme"
     tools:context=".Hospitals">
 
     <androidx.appcompat.widget.SearchView
+        android:background="#2196F3"
         android:id="@+id/hospital_search"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:padding="5dp"
-        android:layout_margin="5dp"
         app:queryHint="Search"
         />
     <LinearLayout
