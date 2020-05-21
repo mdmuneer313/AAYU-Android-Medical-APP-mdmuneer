@@ -18,11 +18,10 @@ import java.util.ArrayList;
 public class HospitalsAdapter extends RecyclerView.Adapter<HospitalsAdapter.MyViewHolder>{
 Context context;
 ArrayList<Hospital> hospitals;
-public HospitalsAdapter(Context c, ArrayList<Hospital> h)
+public HospitalsAdapter(Context c,ArrayList<Hospital> h)
 {
     context=c;
     hospitals=h;
-
 }
 
     @NonNull

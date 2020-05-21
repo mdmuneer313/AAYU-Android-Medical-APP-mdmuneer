@@ -9,7 +9,7 @@
     tools:context=".Hospitals">
 
     <androidx.appcompat.widget.SearchView
-        android:background="#2196F3"
+        android:background="@color/GreenBack"
         android:id="@+id/hospital_search"
         android:layout_width="match_parent"
         android:layout_height="60dp"
