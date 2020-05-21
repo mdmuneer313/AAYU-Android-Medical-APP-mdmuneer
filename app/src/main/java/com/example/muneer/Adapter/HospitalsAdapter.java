@@ -44,6 +44,9 @@ public HospitalsAdapter(Context c,ArrayList<Hospital> h)
         final  String Blood=hospitals.get(position).getBlood();
         final  String Cancer=hospitals.get(position).getCancer();
         final  String eye=hospitals.get(position).getEyes();
+        final  String Ear=hospitals.get(position).getEar();
+        final  String Heart=hospitals.get(position).getHeart();
+        final  String Kidney=hospitals.get(position).getKidney();
 
 
 
@@ -69,6 +72,10 @@ public HospitalsAdapter(Context c,ArrayList<Hospital> h)
                 i.putExtra("Blood",Blood);
                 i.putExtra("Cancer",Cancer);
                 i.putExtra("Eyes",eye);
+                i.putExtra("Ear",Ear);
+                i.putExtra("Heart",Heart);
+                i.putExtra("Kidney",Kidney);
+
 
                 context.startActivity(i);
             }

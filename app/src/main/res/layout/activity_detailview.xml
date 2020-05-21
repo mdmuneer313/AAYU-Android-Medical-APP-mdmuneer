@@ -76,16 +76,17 @@
                 android:textColor="@color/GreenBack"
                 android:text="Addres"
                 android:textSize="15dp"/>
+
             <TextView
                 android:id="@+id/hospitalcontact"
                 android:layout_width="223dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="140dp"
                 android:fontFamily="@font/ptsansnarrow_bold"
-                android:textColor="@color/GreenBack"
                 android:text="Contact No"
-                android:textSize="15dp"/>
+                android:textColor="@color/GreenBack"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/hospitalrating"
@@ -102,7 +103,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1100dp"
+            android:layout_height="650dp"
             android:layout_marginTop="200dp"
             android:background="@color/GreenBack">
 
@@ -174,6 +175,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="360dp"
+                android:text="Ear :"
+                android:textSize="15dp"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"/>
+            <TextView
+                android:id="@+id/earid"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="360dp"
+                android:text="Ear details"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
+
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="400dp"
                 android:text="Eyes :"
                 android:textSize="15dp"
                 android:textColor="@color/DarkTheme"
@@ -183,14 +205,51 @@
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="400dp"
                 android:text="Eyes details"
                 android:textColor="@color/DarkTheme"
                 android:fontFamily="@font/ptsansnarrow_bold"
                 />
 
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="480dp"
+                android:text="Heart :"
+                android:textSize="15dp"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"/>
+            <TextView
+                android:id="@+id/heartid"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="480dp"
+                android:text="Heart details"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
 
-"
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="560dp"
+                android:text="Kidney :"
+                android:textSize="15dp"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"/>
+            <TextView
+                android:id="@+id/kidneytid"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="560dp"
+                android:text="Kidney details"
+                android:textColor="@color/DarkTheme"
+                android:fontFamily="@font/ptsansnarrow_bold"
+                />
 
         </RelativeLayout>
 

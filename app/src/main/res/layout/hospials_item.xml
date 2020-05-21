@@ -34,18 +34,18 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/abrilfatface_regular"
             android:text="Hospital city"
-            android:textColor="@color/colorAccent"
+            android:textColor="#F44336"
             android:textSize="12sp" />
 
         <TextView
             android:id="@+id/Hpaddress"
-            android:layout_width="219dp"
+            android:layout_width="384dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/abrilfatface_regular"
             android:text="Hospital Address"
-            android:textColor="@color/colorAccent"
+            android:textColor="#F44336"
             android:textSize="12sp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/abrilfatface_regular"
             android:text="Contact No"
-            android:textColor="@color/colorAccent"
+            android:textColor="#F44336"
             android:textSize="12sp" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/abrilfatface_regular"
             android:text="Rating"
-            android:textColor="@color/colorAccent"
+            android:textColor="#F44336"
             android:textSize="12sp" />
 
         <TextView
