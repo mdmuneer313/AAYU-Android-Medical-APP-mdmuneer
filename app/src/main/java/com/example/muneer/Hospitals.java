@@ -92,6 +92,7 @@ public class Hospitals extends AppCompatActivity {
                         for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
                         {
                             HspList.add(dataSnapshot1.getValue(Hospital.class));
+
                         }
                       hspAdapter=new HospitalsAdapter(Hospitals.this,HspList);
                         hospital_recycle.setAdapter(hspAdapter);
