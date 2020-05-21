@@ -129,7 +129,7 @@ public class Hospitals extends AppCompatActivity {
         ArrayList<Hospital> mylist=new ArrayList<>();
         for(Hospital object:HspList)
         {
-            if(object.getHpname().toLowerCase().contains(str.toLowerCase()))
+            if(object.getHpname().toLowerCase().contains(str.toLowerCase()) || object.getCity().toLowerCase().contains(str.toLowerCase()))
             {
                 mylist.add(object);
             }
