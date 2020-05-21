@@ -42,6 +42,7 @@ public HospitalsAdapter(Context c,ArrayList<Hospital> h)
         final String Hospitalrating=hospitals.get(position).getHprating();
         final String HospitalContact_no=hospitals.get(position).getContact_No();
         final  String Blood=hospitals.get(position).getBlood();
+        final  String Cancer=hospitals.get(position).getCancer();
         final  String eye=hospitals.get(position).getEyes();
 
 
@@ -59,9 +60,14 @@ public HospitalsAdapter(Context c,ArrayList<Hospital> h)
             public void onClick(View v) {
                 Intent i= new Intent(context, Detailview.class);
                // i.putExtra("key",product_key);
-                    i.putExtra("Hname",Hospitalname);
-                    i.putExtra("City",Hospitalcity);
-                    i.putExtra("Blood",Blood);
+                i.putExtra("Hname",Hospitalname);
+                i.putExtra("City",Hospitalcity);
+                i.putExtra("address",Hospitaladdress);
+                i.putExtra("rating",Hospitalrating);
+                i.putExtra("contact_no",HospitalContact_no);
+
+                i.putExtra("Blood",Blood);
+                i.putExtra("Cancer",Cancer);
                 i.putExtra("Eyes",eye);
 
                 context.startActivity(i);
