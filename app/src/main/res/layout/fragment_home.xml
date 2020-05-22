@@ -31,7 +31,7 @@
             android:columnCount="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/hospital"
+                android:id="@+id/hospitals_details"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"

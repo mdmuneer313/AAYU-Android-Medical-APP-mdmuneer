@@ -9,7 +9,7 @@
       android:id="@+id/search_users"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textColor="#FFFFFF"
+      android:textColor="@color/GreenBack"
       android:textColorHint="@color/GreenBack"
       android:inputType="text"
       android:hint="Search..." />

@@ -14,7 +14,7 @@ public class HomeFragment extends Fragment {
     //private RecyclerView recyclerView;
    // private HomeAdapter homeAdapter;
    // private List<Home> homeList;
-    CardView profiledetails;
+    CardView profiledetails,hospitalDetails;
 
 
     public HomeFragment() {
@@ -33,10 +33,19 @@ public class HomeFragment extends Fragment {
       //  recyclerView.setAdapter(homeAdapter);
        // readUsers();
         profiledetails=view.findViewById(R.id.profile_details);
+        hospitalDetails=view.findViewById(R.id.hospitals_details);
         profiledetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent I=new Intent(getContext(),Account.class);
+                startActivity(I);
+            }
+        });
+
+        hospitalDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I=new Intent(getContext(),Hospitals.class);
                 startActivity(I);
             }
         });
