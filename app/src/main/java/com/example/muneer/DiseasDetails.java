@@ -70,39 +70,9 @@ public class DiseasDetails extends AppCompatActivity {
             });
         }
 
-        if(SearchBar !=null)
-        {
-            SearchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextChange(String s) {
-                    search(s);
-                    return true;
-                }
-            });
-        }
 
     }
 
-    public void  search(String str)
-    {
-        ArrayList<Aid> mylist=new ArrayList<>();
-        for(Aid object: aidList)
-        {
-            if(object.getDiseasname().toLowerCase().contains(str.toLowerCase()))
-            {
-                mylist.add(object);
-            }
-        }
-
-        // hspAdapter=new HospitalsAdapter(Hospitals.this,mylist);
-       AidAdapter adapter=new AidAdapter(DiseasDetails.this,mylist);
-       diseas_recycle.setAdapter(adapter);
-    }
 
 }
 
