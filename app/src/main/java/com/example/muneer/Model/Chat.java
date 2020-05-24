@@ -13,6 +13,7 @@ public class Chat {
         this.isseen = isseen;
 
     }
+
     public Chat() {
     }
 
