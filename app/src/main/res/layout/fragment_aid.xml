@@ -5,14 +5,20 @@
     android:background="@color/DarkTheme"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AID Fragment"
-        android:textSize="30sp"
+    <EditText
+        android:id="@+id/search_diseas"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:hint="Search..."
+        android:inputType="text"
         android:textColor="@color/GreenBack"
-        android:layout_centerInParent="true"/>
+        android:textColorHint="@color/GreenBack" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:id="@+id/aid_recyclerview"
+        />
 
 </RelativeLayout>

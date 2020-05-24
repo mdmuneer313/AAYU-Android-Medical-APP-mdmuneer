@@ -30,6 +30,13 @@ ArrayList<Aid> Aidlist;
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        final String diseasename=Aidlist.get(position).getDiseasName();
+        final String drugname=Aidlist.get(position).getDrugName();
+        final String description=Aidlist.get(position).getDescription();
+        final String hints=Aidlist.get(position).getHints();
+
+
+        holder.Diseasname.setText(Aidlist.get(position).getDiseasName());
 
     }
 
@@ -41,9 +48,10 @@ ArrayList<Aid> Aidlist;
 
     class MyViewHolder extends RecyclerView.ViewHolder
     {
-
+        TextView Diseasname;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            Diseasname=itemView.findViewById(R.id.diseasnameid);
         }
     }
 }
