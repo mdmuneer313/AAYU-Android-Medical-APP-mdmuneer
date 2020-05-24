@@ -15,35 +15,34 @@ import com.example.muneer.R;
 import java.util.ArrayList;
 
 public class AidAdapter  extends RecyclerView.Adapter<AidAdapter.MyViewHolder>{
-ArrayList<Aid> Aidlist;
+ArrayList<Aid> aidlist;
     Context context;
     public AidAdapter(Context c,ArrayList<Aid> a)
     {
         context=c;
-        Aidlist=a;
+        aidlist =a;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.aid_item,parent,false));
+        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.diseas_list,parent,false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final String diseasename=Aidlist.get(position).getDiseasname();
-        final String drugname=Aidlist.get(position).getDrugname();
-        final String description=Aidlist.get(position).getDescription();
-        final String hints=Aidlist.get(position).getHints();
+        final String diseasename= aidlist.get(position).getDiseasname();
+        final String drugname= aidlist.get(position).getDrugname();
+        final String description= aidlist.get(position).getDescripition();
+        final String hints= aidlist.get(position).getHints();
 
-
-        holder.Diseasname.setText(Aidlist.get(position).getDiseasname());
+        holder.Diseasname.setText(aidlist.get(position).getDiseasname());
 
     }
 
     @Override
     public int getItemCount() {
-        return Aidlist.size();
+        return aidlist.size();
     }
 
 
@@ -52,7 +51,7 @@ ArrayList<Aid> Aidlist;
         TextView Diseasname;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            Diseasname=itemView.findViewById(R.id.diseasnameid);
+            Diseasname=itemView.findViewById(R.id.Diseasnameid1);
         }
     }
 }

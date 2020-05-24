@@ -1,17 +1,18 @@
 package com.example.muneer.Model;
 
 public class Aid {
-    private String diseasname;
+    private  String diseasname;
     private String drugname;
-    private String description;
-    private String hints;
+    private  String descripition;
+    private  String hints;
 
-    public Aid(String diseasname, String drugname, String description, String hints) {
+    public Aid(String diseasname, String drugname, String descripition, String hints) {
         this.diseasname = diseasname;
         this.drugname = drugname;
-        this.description = description;
+        this.descripition = descripition;
         this.hints = hints;
     }
+
     public Aid() {
     }
 
@@ -31,12 +32,12 @@ public class Aid {
         this.drugname = drugname;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescripition() {
+        return descripition;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescripition(String descripition) {
+        this.descripition = descripition;
     }
 
     public String getHints() {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/DarkTheme"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:id="@+id/Diseasnameid1"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/ptsansnarrow_bold"
+            android:text="Hospital Name"
+            android:textColor="@color/GreenBack"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/GreenBack"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
