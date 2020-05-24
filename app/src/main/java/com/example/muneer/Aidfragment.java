@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,9 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.muneer.Adapter.AidAdapter;
-import com.example.muneer.Adapter.HospitalsAdapter;
 import com.example.muneer.Model.Aid;
-import com.example.muneer.Model.Hospital;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,16 +21,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Aidfragment extends Fragment {
     private RecyclerView recyclerView;
     private AidAdapter aidAdapter;
     private ArrayList<Aid> aidList;
 
-    SearchView SearchBar;
+    EditText SearchBar;
     DatabaseReference reference;
     FirebaseDatabase database;
+
+    public Aidfragment()
+    {
+
+    }
 
     @Nullable
     @Override
@@ -48,24 +50,19 @@ public class Aidfragment extends Fragment {
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("AID");
 
-        return view;
-
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if(reference!=null)
-        {
-            reference.addValueEventListener(new ValueEventListener() {
+          reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists())
                     {
+
                         aidList=new ArrayList<>();
+                        aidList.clear();
                         for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
                         {
-                            aidList.add(dataSnapshot1.getValue(Aid.class));
+                            // aidList.add(dataSnapshot1.getValue(Aid.class));
+                            Aid aid = dataSnapshot1.getValue(Aid.class);
+                            aidList.add(aid);
 
                         }
                         aidAdapter=new AidAdapter(getContext(),aidList);
@@ -77,8 +74,16 @@ public class Aidfragment extends Fragment {
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            })
-        }
+            });
+
+        return view;
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
     }
 }
 

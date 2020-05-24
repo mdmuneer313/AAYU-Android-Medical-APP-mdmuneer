@@ -1,47 +1,49 @@
 package com.example.muneer.Model;
 
 public class Aid {
-    private String DiseasName;
-    private String DrugName;
-    private String Description;
-    private String Hints;
+    private String diseasname;
+    private String drugname;
+    private String description;
+    private String hints;
 
-    public Aid(String diseasName, String drugName, String description, String hints) {
-        DiseasName = diseasName;
-        DrugName = drugName;
-        Description = description;
-        Hints = hints;
+    public Aid(String diseasname, String drugname, String description, String hints) {
+        this.diseasname = diseasname;
+        this.drugname = drugname;
+        this.description = description;
+        this.hints = hints;
+    }
+    public Aid() {
     }
 
-    public String getDiseasName() {
-        return DiseasName;
+    public String getDiseasname() {
+        return diseasname;
     }
 
-    public void setDiseasName(String diseasName) {
-        DiseasName = diseasName;
+    public void setDiseasname(String diseasname) {
+        this.diseasname = diseasname;
     }
 
-    public String getDrugName() {
-        return DrugName;
+    public String getDrugname() {
+        return drugname;
     }
 
-    public void setDrugName(String drugName) {
-        DrugName = drugName;
+    public void setDrugname(String drugname) {
+        this.drugname = drugname;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getHints() {
-        return Hints;
+        return hints;
     }
 
     public void setHints(String hints) {
-        Hints = hints;
+        this.hints = hints;
     }
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,19 +31,19 @@ ArrayList<Aid> Aidlist;
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final String diseasename=Aidlist.get(position).getDiseasName();
-        final String drugname=Aidlist.get(position).getDrugName();
+        final String diseasename=Aidlist.get(position).getDiseasname();
+        final String drugname=Aidlist.get(position).getDrugname();
         final String description=Aidlist.get(position).getDescription();
         final String hints=Aidlist.get(position).getHints();
 
 
-        holder.Diseasname.setText(Aidlist.get(position).getDiseasName());
+        holder.Diseasname.setText(Aidlist.get(position).getDiseasname());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return Aidlist.size();
     }
 
 

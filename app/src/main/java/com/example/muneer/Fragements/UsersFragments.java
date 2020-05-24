@@ -87,6 +87,7 @@ public class UsersFragments extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
 
+
                     assert user != null;
                     assert fuser != null;
                     if (!user.getId().equals(fuser.getUid())){
