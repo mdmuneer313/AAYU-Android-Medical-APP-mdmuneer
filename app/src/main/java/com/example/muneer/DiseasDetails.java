@@ -40,11 +40,36 @@ public class DiseasDetails extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("Aid");
 
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists())
+                {
+                    aidList =new ArrayList<>();
+                    for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
+                    {
+                        Aid a=dataSnapshot1.getValue(Aid.class);
+                        aidList.add(a);
+                        //aidList.add(dataSnapshot1.getValue(Aid.class));
+
+                    }
+                    aidAdapter=new AidAdapter(DiseasDetails.this, aidList);
+                    diseas_recycle.setAdapter(aidAdapter);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                StyleableToast.makeText(DiseasDetails.this, "Something went Wrong......",R.style.exampleToast).show();
+            }
+        });
+
     }
     @Override
     protected void onStart() {
         super.onStart();
-        if(reference!=null)
+      /*  if(reference!=null)
         {
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -69,6 +94,8 @@ public class DiseasDetails extends AppCompatActivity {
                 }
             });
         }
+
+       */
 
 
     }

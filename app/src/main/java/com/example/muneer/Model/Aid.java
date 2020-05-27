@@ -14,6 +14,7 @@ public class Aid {
     }
 
     public Aid() {
+        super();
     }
 
     public String getDiseasname() {
