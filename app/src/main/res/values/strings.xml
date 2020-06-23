@@ -30,6 +30,7 @@ To design an application that helps the user to find the best suitable hospital 
 
     <string name="lictext">Life Insurance Corporation of India (LIC) is one of the oldest state-owned insurance Companies in India.
        </string>
+    <string name="vimsdetails">Vims Hospital in Bellary Ho, Bellary has a well-equipped clinic with all the modern equipment. The clinic has separate waiting and consultation areas which allow enough space for patients to wait conveniently at the clinic. Being a specialized Hospitals, the doctor offers a number of medical services. The clinic is operational between 00:00 - 23:59.</string>
 
     <string name="description">AAYU \'s Hospital’s main campus is located in the heart of the city. In addition, a number of programs function outside the actual Hospital, including the Early Intervention Program and the Dan Marino Center for developmental disorders. Interns are provided office space at Nicklaus Children\'s Hospital. Psychological assessment materials and computer assisted scoring programs are available. Interns have access to computers, audiovisual and library facilities within the Hospital. A number of areas are devoted to special functions that serve the training programs. Evaluation and therapy rooms are designed for patient evaluations, treatment, clinical interviews and counseling.</string>
 </resources>

@@ -14,7 +14,7 @@
         android:id="@+id/diseas_search"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:queryHint="Search Hospital Name/City "
+        app:queryHint="Search Diseas Name"
         />
 
     <LinearLayout
