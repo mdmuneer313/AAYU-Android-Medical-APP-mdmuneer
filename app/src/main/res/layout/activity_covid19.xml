@@ -27,37 +27,41 @@
                 android:layout_marginTop="30dp">
 
                 <TableRow
-                    android:background="#0079D6"
+                    android:background="#FFC107"
                     android:padding="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/DarkTheme"
                         android:text="States" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/DarkTheme"
                         android:text="Confirmed Case" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/DarkTheme"
                         android:text="Recovered" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/DarkTheme"
                         android:text="Deaths" />
 
                 </TableRow>
 
                 <TableRow
-                    android:background="#DAE8FC"
+                    android:background="#E3DACE"
                     android:padding="5dp">
 
                     <TextView
@@ -89,7 +93,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:background="#DAE8FC"
+                    android:background="#E3DACE"
                     android:padding="5dp">
 
                     <TextView
@@ -121,7 +125,7 @@
                 </TableRow>
 
                 <TableRow
-                    android:background="#DAE8FC"
+                    android:background="#E3DACE"
                     android:padding="5dp">
 
                     <TextView
@@ -151,13 +155,77 @@
                         android:text="2,562"
                         android:textAlignment="center" />
                 </TableRow>
+                <TableRow
+                    android:background="#E3DACE"
+                    android:padding="5dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Karnataka" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2,19,9262,"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1,34,811"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3831"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#E3DACE"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delhi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1,34,811"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1,36,251"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4,188"
+                        android:textAlignment="center" />
+                </TableRow>
 
             </TableLayout>
 
             <TextView
                 android:layout_width="311dp"
                 android:layout_height="62dp"
+                android:layout_row="0"
                 android:layout_column="0"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
@@ -172,7 +240,7 @@
                 android:layout_row="2"
                 android:layout_column="0"
                 android:layout_marginLeft="20dp"
-                app:cardBackgroundColor="#E4E2E2"
+                app:cardBackgroundColor="#E1A2A2"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
@@ -202,7 +270,7 @@
                 android:layout_row="2"
                 android:layout_column="0"
                 android:layout_marginLeft="220dp"
-                app:cardBackgroundColor="#E4E2E2"
+                app:cardBackgroundColor="#D5FBA9"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
@@ -233,7 +301,7 @@
                 android:layout_row="1"
                 android:layout_column="0"
                 android:layout_margin="20dp"
-                app:cardBackgroundColor="#FDFDFD"
+                app:cardBackgroundColor="#D3B68B"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 

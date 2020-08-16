@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Covid19Activity"></activity>
+        <activity android:name=".Covid19Activity"
+            android:label="COVID-19"
+            ></activity>
         <activity
             android:name=".DiseasDetails"
             android:theme="@style/AppTheme.NoActionBar" />

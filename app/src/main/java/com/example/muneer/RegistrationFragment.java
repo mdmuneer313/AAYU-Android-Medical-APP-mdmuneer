@@ -48,7 +48,7 @@ public class RegistrationFragment extends AppCompatActivity {
         LoginBtn=findViewById(R.id.createText);
         //fStore = FirebaseFirestore.getInstance();
         progressBar=findViewById(R.id.progressBar);
-
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
          @Override
@@ -59,6 +59,7 @@ public class RegistrationFragment extends AppCompatActivity {
              final String FullName = fullname.getText().toString();
              final String Phone    = phone.getText().toString();
              final String Repassword    = repassword.getText().toString();
+
 
              if(Password.length() < 6) {
                  StyleableToast.makeText(RegistrationFragment.this, "Password Must be >= 6 Characters",R.style.exampleToast).show();
