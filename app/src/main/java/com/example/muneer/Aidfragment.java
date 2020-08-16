@@ -77,7 +77,7 @@ public class Aidfragment extends Fragment {
        Pandamics.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent i=new Intent(getContext(),DiseasDetails.class);
+               Intent i=new Intent(getContext(),Covid19Activity.class);
                startActivity(i);
            }
        });
