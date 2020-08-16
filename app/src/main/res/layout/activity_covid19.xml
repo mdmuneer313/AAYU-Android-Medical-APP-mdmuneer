@@ -16,7 +16,7 @@
         <GridLayout
             android:layout_width="438dp"
             android:layout_height="784dp"
-            android:background="#009688">
+            android:background="@color/GreenBack">
 
             <TableLayout
                 android:layout_width="372dp"
