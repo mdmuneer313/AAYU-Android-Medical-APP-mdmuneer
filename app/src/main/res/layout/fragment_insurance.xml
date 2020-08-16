@@ -67,6 +67,7 @@
                 />
 
             <Button
+                android:id="@+id/LIClink"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="160dp"
@@ -135,6 +136,7 @@
                 />
 
             <Button
+                android:id="@+id/HDFClink"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="160dp"
@@ -202,6 +204,7 @@
                 />
 
             <Button
+                android:id="@+id/MAXlink"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="160dp"
@@ -222,6 +225,7 @@
             app:cardCornerRadius="30dp">
 
             <Button
+                android:id="@+id/BAJAJlink"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="120dp"
@@ -286,6 +290,7 @@
             app:cardCornerRadius="30dp">
 
             <Button
+                android:id="@+id/KOTAKlink"
                 android:layout_width="140dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="120dp"
